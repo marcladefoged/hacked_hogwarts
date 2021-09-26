@@ -1,0 +1,269 @@
+[data-status="off"] {
+  color: red;
+}
+
+[data-status="on"] {
+  color: green;
+}
+
+/* general styling */
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: lightblue;
+  background-size: cover;
+}
+
+header {
+  background-image: url("images/hogwarts4.png");
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+
+h1 {
+  font-family: "Henny Penny", cursive;
+  color: rgb(207, 156, 44);
+  font-size: 8rem;
+  position: absolute;
+  right: 0px;
+  margin-top: 100px;
+  margin-right: 50px;
+  letter-spacing: 8px;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0 0 40px #e68a00, 0 0px #e68a00;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 50px #ffd04d, 0 0 0px #ffd04d;
+  }
+}
+
+header h2 {
+  font-family: "Henny Penny", cursive;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  right: 0px;
+  margin-top: 250px;
+  margin-right: 80px;
+}
+
+button.filter {
+  /*   background-image: url(images/scroll_button.png);
+  height: 380px;
+  width: 260px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem; */
+
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 1.5rem;
+  font-family: "Henny Penny", cursive;
+}
+
+button.sort {
+  /* background-image: url(images/scroll_button.png); */
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 1.5rem;
+  font-family: "Henny Penny", cursive;
+}
+
+p {
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+/* Student grid styling */
+
+#grid_students {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 60px;
+  text-align: center;
+  margin: 20px;
+  /*   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+#studenttext {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  /*   border: 5px solid black;
+  height: 100%; */
+}
+
+.studentname {
+  font-family: "Henny Penny", cursive;
+  font-size: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nametext {
+  max-height: 100px;
+}
+
+.studentmiddlename {
+  display: none;
+}
+.studentimage {
+  position: relative;
+  top: 20px;
+  z-index: 1;
+  width: 70%;
+  height: 50%;
+}
+
+.studentcrest {
+  position: relative;
+  z-index: 2;
+  top: -70px;
+  left: 80px;
+  width: 100px;
+}
+
+.inputsearch {
+  position: relative;
+  top: 300px;
+  left: 100px;
+}
+
+#searchfunction {
+  border: 10px solid white;
+  width: 300px;
+  border-radius: 10px;
+  font-family: "Henny Penny", cursive;
+  font-size: 1.2rem;
+}
+
+.search {
+  border: 10px solid white;
+  border-radius: 10px;
+  font-family: "Henny Penny", cursive;
+  font-size: 1.2rem;
+}
+
+#pop_up {
+  border: 1px solid black;
+  background-color: #e68a00;
+  border-radius: 10px;
+  display: block;
+  position: absolute;
+  width: fit-content;
+  align-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+#pop_up [data-field="image"] {
+  width: 30%;
+}
+
+#pop_up [data-field="crest"] {
+  width: 20%;
+}
+
+.popupimage {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popupcrest {
+  position: relative;
+  top: -200px;
+  float: right;
+  margin-right: 50px;
+}
+
+#close {
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+  margin: 10px;
+  font-size: 2rem;
+  border-radius: 10px;
+  width: 40px;
+}
+
+.infotext {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+#expel_button {
+  font-family: "Henny Penny", cursive;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+  margin: 10px;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+  margin-left: 80px;
+}
+
+#prefect_button,
+#squad_button,
+#captain_button {
+  font-family: "Henny Penny", cursive;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+  margin: 10px;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+.student_info {
+  margin-left: 10px;
+  margin-top: 60px;
+}
+
+.text_output {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 10px;
+}

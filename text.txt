@@ -1,0 +1,99 @@
+families blod:
+https://petlatkea.dk/2021/hogwarts/families.json 
+
+json of students:
+The list of students is to be read from: https://petlatkea.dk/2021/hogwarts/students.json 
+
+images:
+ https://petlatkea.dk/2021/hogwarts/images.zip 
+
+
+ ....HTML:
+ 
+    - filter buttons
+        - house
+        - expelled/non-expelled
+        - member of inqustial squad
+    - make filter buttons dropdown
+
+    - sorting buttons
+        - sort dir  
+        - firstName
+        - lastName
+        - captains 
+    - student first name, middle name, evt nickname, last name, house, 
+    - display in grid?
+ - setting up css
+
+
+ ....CODE
+
+ CREATE OBJECTS FROM JSON:
+
+ - load json
+ - prapare data
+
+ --getNameParts
+ --- firstName
+ --- middleName
+ --- lastName
+ --- nickName
+----- clean the data
+ -- getHouse
+
+ DISPLAY OBJECTS:
+ - hardcoded display one object 
+ - display each object
+
+ FILTER:
+ SORT:
+
+DISPLAY POPUP
+
+- add eventlistener on each student
+- open POPUP
+- display student details
+    - firstName
+    - lastName
+    - middleName
+    - nickName
+    - house
+    + house crest
+    - house color(as background)
+    - blood status(need to calculate from families)
+
+- display squad button  
+- display prefect button (on/off)
+- display captain button (on/off)
+- display expell button 
+
+
+ add functionality to buttons;
+ - make buttons add or remove property
+ - make expell button remove student from list
+ - make expell button add student to new list
+ - make expell filter show expell list
+
+-------
+
+display the total of list
+- get lenghth of current list
+- display total
+
+
+- add rules to prefect buttons etc
+-- make array of students with prefect and same house;
+--- first make array of students with prefects
+--- filter array of students with prefects by house
+--- if the length of the filtered array is longer than two ALEERT!!
+
+- add rule to squad button
+-- calculate blood status
+-- display on students
+-- for students blood status is half blood (alert)
+-- for students blood status full blod 
+--- apply to squad
+
+- add functionality to search field
+- function get input from search field
+- function filter by input
